@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>死龍傷害計算器 | 崩壞：星穹鐵道</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <div class="container">
+    <h1>死龍傷害計算器</h1>
+    <form id="damageForm">
+      <label>角色等級:
+        <input type="number" id="level" required>
+      </label>
+
+      <label>行跡（天賦）等級:
+        <input type="number" id="talent" required>
+      </label>
+
+      <label>選擇光錐:
+        <select id="lightCone">
+          <option value="victory">勝利只在朝夕間</option>
+          <option value="sweat">多流汗，少流淚</option>
+          <option value="greetings">天才們的問候</option>
+        </select>
+      </label>
+
+      <label>其他加成 (%):
+        <input type="number" id="bonus" value="0">
+      </label>
+
+      <div class="buttons">
+        <button type="button" onclick="calculateDamage()">計算傷害</button>
+        <button type="reset">重置</button>
+      </div>
+    </form>
+
+    <div id="result">請輸入資料後點擊「計算傷害」</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
